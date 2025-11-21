@@ -199,24 +199,26 @@ filtered_images/
 └── ibsf/
 ```
 
-## 📈 Exemplo de Resultados (Grupo 5)
+## 📈 Resultados Obtidos 
 
 ### Médias das Métricas
 
 | Filtro | RMSE ↓ | SSIM ↑ | r ↑ | SNR (dB) ↑ | Corners |
 |--------|--------|--------|-----|------------|---------|
-| Gaussian Blur | 0.279 | 0.372 | 0.818 | 12.66 | 390 |
-| Moving Average | 0.277 | 0.567 | 0.905 | 12.29 | 395 |
-| Median | 0.246 | 0.571 | 0.911 | 14.03 | 279 |
-| Wiener | 0.290 | 0.305 | 0.777 | 19.86 | 353 |
-| IBSF | 0.244 | 0.556 | 0.890 | 14.18 | 272 |
+| Gaussian Blur | 0.2786 | 0.3717 | 0.8180 | 12.66 | 390 |
+| Moving Average | 0.2768 | 0.5672 | 0.9051 | 12.29 | 395 |
+| Median | 0.2465 | 0.5707 | 0.9111 | 14.03 | 279 |
+| Wiener | 0.2664 | 0.6082 | 0.9271 | 15.68 | 160 |
+| IBSF | 0.2898 | 0.3050 | 0.7767 | 19.86 | 353 |
 
 **Observações**:
 - ↑ = maior é melhor
 - ↓ = menor é melhor
-- Median e IBSF apresentam melhor RMSE
-- Moving Average e Median têm melhor SSIM
-- Wiener tem maior SNR mas variância alta
+- **Melhor RMSE**: Median (0.2465) - menor erro global
+- **Melhor SSIM**: Wiener (0.6082) - maior similaridade estrutural
+- **Melhor Correlação**: Wiener (0.9271) - mais correlacionado com original
+- **Melhor SNR**: IBSF (19.86 dB) - maior relação sinal-ruído, mas com alta variância (±28.58)
+- **Preservação de Corners**: Wiener detectou menos corners (160), indicando maior suavização
 
 ## 🔍 Análise Técnica
 
